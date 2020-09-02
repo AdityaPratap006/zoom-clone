@@ -6,6 +6,7 @@ const app = express();
 const server = new http.Server(app);
 
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.redirect(`/${uuidv4()}`);
@@ -13,6 +14,7 @@ app.get('/', (req, res) => {
 
 app.get('/:room', (req, res) => {
     res.render('room', { roomId: req.params.room });
-})
+});
+
 
 server.listen(5000);
