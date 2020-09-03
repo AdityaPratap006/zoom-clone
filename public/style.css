@@ -35,7 +35,7 @@ body {
 
 #video-grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 video {
@@ -119,4 +119,41 @@ video {
 .unmute,
 .stop {
   color: #cc3b33;
+}
+
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .main__left {
+    flex: 1.5;
+  }
+
+  .main__right {
+    flex: 1;
+  }
+
+  #video-grid {
+    flex-wrap: wrap;
+  }
+
+  video {
+    width: 120px;
+    height: 120px;
+  }
+
+  .main__controls {
+    flex-wrap: wrap;
+  }
+
+  .main__controls__button i {
+    font-size: 12px;
+  }
+
+  .main__message_container {
+    position: fixed;
+    bottom: 0;
+    width: 90vw;
+  }
 }
