@@ -1,12 +1,17 @@
 #video-grid {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
 }
 
 #video-grid video {
-  height: 500px;
-  width: 800px;
+  height: 40vh;
+  width: 80vw;
+  object-fit: contain;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
